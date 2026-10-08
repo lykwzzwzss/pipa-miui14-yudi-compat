@@ -25,16 +25,6 @@
 
 完整[安装、升级、恢复及限制说明](module/使用说明.md)。这是局部兼容层，原版完美横屏计划的 embedding JAR、规则、WebUI 和更新入口独立保留。原版新增框架或变更 embedding、系统、桌面、PIF/挂载环境变化时需重新验证，不能保证所有未来版本直接兼容。
 
-## OTA 更新
-
-模块管理器使用 `module.prop` 的 `updateJson` 入口检查更新：
-
-`https://raw.githubusercontent.com/lykwzzwzss/pipa-miui14-yudi-compat/main/update.json`
-
-发布稳定版 Release 后，GitHub Actions 校验包的ID、版本、署名、更新入口和载荷哈希，再更新版本号、下载链接及更新说明。预发布版不进入稳定通道。管理器提示更新后由使用者确认安装、重启；兼容检查仍会执行。
-
-后续发布步骤见[发布与OTA维护](docs/RELEASING.md)。
-
 ## 源码与验证
 
 `src/` 为Java兼容辅助代码，`patches/`、`navigation/patches/` 为最终smali补丁；`module/` 包含已验证载荷和安装脚本。`package.py` 可从这些载荷重新打包；完整ROM载荷重建需要指定原厂/供体输入和Android工具，见[构建说明](docs/BUILD.md)。
