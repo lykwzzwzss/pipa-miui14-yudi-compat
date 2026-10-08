@@ -1,0 +1,24 @@
+{
+  "pif_version": "v4.7-1-inject-s",
+  "purpose": "Skip only PIF FORCE_DENYLIST_UNMOUNT for local framework compatibility",
+  "files": [
+    {
+      "name": "arm64-v8a.so",
+      "va": "0x514c",
+      "file_offset": "0x514c",
+      "old": "00013fd6",
+      "new": "1f2003d5",
+      "original_sha256": "5834900ced422a0f094736acf61038cfb2401b8055064d5caa9080dbe5cbf578",
+      "patched_sha256": "68ef78c49cbd70a4ccc3b6d6e8f199225a6c1b89c19f7755c219a303bb17f710"
+    },
+    {
+      "name": "armeabi-v7a.so",
+      "va": "0x3446",
+      "file_offset": "0x3446",
+      "old": "9047",
+      "new": "00bf",
+      "original_sha256": "be07d89251361ff1f4dde985e0fff34a0600ff925d8d3ab5f229bc1b4685fb23",
+      "patched_sha256": "660d61f7823f6cd85bd7341624a9c96dac2700acc265f4b8fa789f022ddfdc4a"
+    }
+  ]
+}

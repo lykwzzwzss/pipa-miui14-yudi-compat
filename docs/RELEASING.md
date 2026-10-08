@@ -11,3 +11,5 @@
 `updateJson` 使用标准模块更新字段version、versionCode、zipUrl、changelog；额外sha256用于维护校验。发布脚本校验不代表所有模块管理器一定验证此额外字段。
 
 在线更新仍执行原有兼容条件与安装预检，不负责更新原版完美横屏计划或PIF。框架所有权和原版模块更新入口保持独立。
+
+独立PIF补丁打包：`python pif-compat/package.py`，产物可作为同一Release的附加ZIP；不改主兼容层版本或主ZIP。更新附件说明后，手动运行本工作流并指定该稳定tag可同步发布说明；同一主包版本的SHA-256必须保持不变。

@@ -12,3 +12,7 @@
 仅限小米平板6 pipa / Android13 / V14.0.3.0.TMZCNXM。须独立安装原版完美横屏计划3.03.08并选6 Max/yudi，保持已验证的 Hybrid Mount disable_umount=true 和适用的 PIF 兼容补丁。详细条件见 README 与使用说明。
 
 本机实测：系统与桌面重启保留隐藏设置，竖屏 Dock 高217像素、底部间距40像素，电话/GMS/系统框架视图一致。云服务 cloudidprovider 缺失是双模块关闭时也存在的设备异常，此模块不修复该独立问题。
+
+## 独立 PIF 兼容补丁附件
+
+本 Release 另附 `pif-v4.7-1-inject-s-unmount-compat-1.0.0.zip`，在已经安装的匹配 PIF v4.7-1-inject-s 上仅修改两处强制卸载调用。主兼容层 ZIP 保持不变。原版未补丁/已补丁文件均严格校验，带原库备份和失败回退；卸载补丁会恢复匹配 PIF 并禁用依赖的框架双模块。其他 PIF 版本拒绝安装，完整使用条件见 [PIF补丁说明](https://github.com/lykwzzwzss/pipa-miui14-yudi-compat/blob/main/docs/PIF_COMPAT.md)。

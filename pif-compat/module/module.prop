@@ -1,0 +1,6 @@
+id=pif_inject_s_unmount_compat
+name=PIF inject-s 强制卸载兼容补丁
+version=1.0.0
+versionCode=10000
+author=lykwzzwzss, Codex
+description=仅匹配哈希的PIF v4.7-1-inject-s。跳过强制卸载请求，避免框架混用；操作可检查，卸载会还原并禁用依赖的框架双模块。首次安装须重启。

@@ -14,20 +14,22 @@
 - 减少布局过程的重复反射、资源同步和不必要的加载跟踪。
 - 安装及开机预检；下一次启动的临时保护在稳定后自行退出，超时尝试禁用双模块并恢复原厂框架。
 
+[PIF 独立补丁的安装、备份与卸载说明](docs/PIF_COMPAT.md)。已应用相同补丁的本机无需重复安装。
+
 ## 使用条件
 
 - 仅小米平板6 **pipa / Android13 / MIUI14 V14.0.3.0.TMZCNXM**。
 - 本机已验证桌面 `RELEASE-4.40.0.5727-04071453`；完整文件校验见[使用说明](module/使用说明.md)。
 - 原版 `pad-miui-based-on-tiramisu-3.03.08.zip` 独立安装，选择 **6 Max / yudi**，两个模块同时启用或停用。
 - 已验证 ResukiSU/KernelSU35171 + Hybrid Mount4.2.0-1815，**禁用umount必须开启**。
-- 启用注入版 PIF 时，保留本机已验证的 v4.7-1-inject-s 强制卸载兼容补丁；本包不附带该补丁。
+- 启用注入版 PIF 时，须应用匹配的 v4.7-1-inject-s 强制卸载兼容补丁；[Release 提供独立补丁 ZIP](https://github.com/lykwzzwzss/pipa-miui14-yudi-compat/releases/download/v1.0.0/pif-v4.7-1-inject-s-unmount-compat-1.0.0.zip)，先安装匹配的 PIF 再安装补丁。主兼容层 ZIP 不内置或自动应用它，其他 PIF 版本不可混用。
 - 不与替换相同框架文件的其他模块同时启用。系统更新前先停用/卸载双模块并重启恢复原厂框架。
 
 完整[安装、升级、恢复及限制说明](module/使用说明.md)。这是局部兼容层，原版完美横屏计划的 embedding JAR、规则、WebUI 和更新入口独立保留。原版新增框架或变更 embedding、系统、桌面、PIF/挂载环境变化时需重新验证，不能保证所有未来版本直接兼容。
 
 ## 源码与验证
 
-`src/` 为Java兼容辅助代码，`patches/`、`navigation/patches/` 为最终smali补丁；`module/` 包含已验证载荷和安装脚本。`package.py` 可从这些载荷重新打包；完整ROM载荷重建需要指定原厂/供体输入和Android工具，见[构建说明](docs/BUILD.md)。
+`pif-compat/` 为独立PIF字节补丁的源码、打包和隔离测试；`src/` 为Java兼容辅助代码，`patches/`、`navigation/patches/` 为最终smali补丁；`module/` 包含已验证载荷和安装脚本。`package.py` 可从这些载荷重新打包；完整ROM载荷重建需要指定原厂/供体输入和Android工具，见[构建说明](docs/BUILD.md)。
 
 1.0.0本机验证：核心进程及GMS框架视图一致；系统/桌面重启保留隐藏设置；竖屏Dock显示/隐藏前后均高217像素、底部间距40像素。未做长期电池对照测试。设备原有云服务cloudidprovider缺失崩溃在双模块关闭时亦存在，本模块不处理该问题。
 
