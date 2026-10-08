@@ -1,0 +1,27 @@
+[
+  {
+    "component": "framework",
+    "output": "system/framework/framework.jar",
+    "sha256": "704781fc8afe081bfff3a03b06898b8dc1d1da16ab9dc4f76436817eab5adc4a"
+  },
+  {
+    "component": "services",
+    "output": "system/framework/services.jar",
+    "sha256": "3ada54c2d1770b007de27f72f51394e4af9e715892fcccaa91076b35263696d1"
+  },
+  {
+    "component": "extensions",
+    "output": "system/system_ext/framework/androidx.window.extensions.jar",
+    "sha256": "9f3480ac07dfc2fbbfcd9f160ad5f49eb8b387e88e7bdf8446f1805b194ce01f"
+  },
+  {
+    "component": "resources",
+    "output": "system/system_ext/framework/pipa-yudi-res.apk",
+    "sha256": "b52e75aee21720cbbabba2a7955d3fa50a5291201cdf0a86e81272c095a98b75"
+  },
+  {
+    "component": "launcher",
+    "output": "system/system_ext/framework/pipa-home-patch.jar",
+    "sha256": "c6cd66390ff13b04cca4a08f502d8ffe69eca76ddac25180ac653d6a5cde2300"
+  }
+]

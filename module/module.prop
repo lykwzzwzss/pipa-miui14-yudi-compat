@@ -1,0 +1,7 @@
+id=pipa_miui14_divider_port
+name=Pipa MIUI14 · 6 Max 框架兼容层
+version=1.0.0
+versionCode=10000
+author=lykwzzwzss, Codex
+description=pipa V14.0.3.0.TMZCNXM 专用。搭配原版完美横屏计划 3.03.08 的 6 Max/yudi 分支，解锁平行窗口滑动条；恢复隐藏手势提示线开关并保留 Dock 高度和位置。需保留已验证的 Hybrid Mount/PIF 兼容配置，详见使用说明。
+updateJson=https://raw.githubusercontent.com/lykwzzwzss/pipa-miui14-yudi-compat/main/update.json
